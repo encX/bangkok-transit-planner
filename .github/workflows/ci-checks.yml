@@ -6,7 +6,7 @@ on:
     
 
 jobs:
-  build-client:
+  client-check:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -23,7 +23,7 @@ jobs:
         path: node_modules
         key: client-yarn-${{ hashFiles('yarn.lock') }}
         restore-keys: client-yarn-
-    - run: yarn
+    - run: yarn install --frozen-lockfile
     - run: yarn lint
     - run: yarn build
     - run: yarn test
