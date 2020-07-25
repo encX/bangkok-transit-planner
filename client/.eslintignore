@@ -1,0 +1,3 @@
+# Build folder
+dist
+serviceWorker.ts
