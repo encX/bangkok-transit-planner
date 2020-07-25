@@ -10,15 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5529eacd-a987-4868-83ac-918048bad409" name="Default Changelist" comment="Remove unused import">
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="5529eacd-a987-4868-83ac-918048bad409" name="Default Changelist" comment="Scaffold">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +112,8 @@
       <option name="presentableId" value="Default" />
       <updated>1595669026661</updated>
       <workItem from="1595669027857" duration="2293000" />
-      <workItem from="1595671641488" duration="1126000" />
+      <workItem from="1595671641488" duration="1211000" />
+      <workItem from="1595672982487" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Shave unused content">
       <created>1595670193496</created>
@@ -142,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595670619766</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Scaffold">
+      <created>1595672909971</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595672909971</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,37 +164,38 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Shave unused content" />
     <MESSAGE value="Remove unused import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused import" />
+    <MESSAGE value="Scaffold" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scaffold" />
   </component>
   <component name="WindowStateProjectService">
     <state x="744" y="382" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595671306072">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="744" y="382" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1595671306072" />
-    <state width="1282" height="424" key="GridCell.Tab.0.bottom" timestamp="1595672343190">
+    <state width="1282" height="424" key="GridCell.Tab.0.bottom" timestamp="1595672978628">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="424" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1595672343190" />
-    <state width="1282" height="424" key="GridCell.Tab.0.center" timestamp="1595672343189">
+    <state width="1282" height="424" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1595672978628" />
+    <state width="1282" height="424" key="GridCell.Tab.0.center" timestamp="1595672978628">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="424" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1595672343189" />
-    <state width="1282" height="424" key="GridCell.Tab.0.left" timestamp="1595672343188">
+    <state width="1282" height="424" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1595672978628" />
+    <state width="1282" height="424" key="GridCell.Tab.0.left" timestamp="1595672978627">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="424" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1595672343188" />
-    <state width="1282" height="424" key="GridCell.Tab.0.right" timestamp="1595672343190">
+    <state width="1282" height="424" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1595672978627" />
+    <state width="1282" height="424" key="GridCell.Tab.0.right" timestamp="1595672978628">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="424" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1595672343190" />
+    <state width="1282" height="424" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1595672978628" />
     <state x="64" y="359" key="SettingsEditor" timestamp="1595671362504">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="64" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1595671362504" />
-    <state x="301" y="460" key="Vcs.Push.Dialog.v2" timestamp="1595670623509">
+    <state x="301" y="460" key="Vcs.Push.Dialog.v2" timestamp="1595672922123">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="301" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1595670623509" />
+    <state x="301" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1595672922123" />
     <state x="495" y="640" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595670399490">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
