@@ -8,6 +8,9 @@ on:
 jobs:
   build-client:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/client
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 14
