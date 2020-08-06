@@ -21,7 +21,7 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 const server = http.createServer(app);
 const port = 3000;
 
-function onError(error: ErrnoException): void {
+function onError(error: NodeJS.ErrnoException): void {
 	if (error.syscall !== 'listen') {
 		throw error;
 	}
