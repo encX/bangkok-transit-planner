@@ -1,6 +1,7 @@
-import {Model, model, property} from '@loopback/repository';
+import {hasMany, Model, model, property} from '@loopback/repository';
+import {Station} from './station.model';
 
-@model({settings: {strict: false}})
+@model({settings: {strict: true}})
 export class Route extends Model {
   @property({
     type: 'number',
@@ -8,18 +9,8 @@ export class Route extends Model {
   })
   cost: number;
 
-  @property({
-    type: 'array',
-    itemType: 'number',
-    required: true,
-  })
-  stations: number[];
-
-  // Define well-known properties here
-
-  // Indexer property to allow additional data
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [prop: string]: any;
+  @hasMany(() => Station)
+  stations: Station[];
 
   constructor(data?: Partial<Route>) {
     super(data);
