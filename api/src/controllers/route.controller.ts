@@ -2,10 +2,10 @@ import {service} from '@loopback/core';
 import {param, get, getModelSchemaRef} from '@loopback/rest';
 import {StationId} from '../aliases/StationId';
 import {Route} from '../models';
-import {RoutesService} from '../services';
+import {RouteService} from '../services';
 
-export class RoutesController {
-  constructor(@service() public routesService: RoutesService) {}
+export class RouteController {
+  constructor(@service() public routesService: RouteService) {}
 
   @get('/routes', {
     responses: {

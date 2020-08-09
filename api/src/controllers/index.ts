@@ -1,2 +1,2 @@
 export * from './station.controller';
-export * from './routes.controller';
+export * from './route.controller';

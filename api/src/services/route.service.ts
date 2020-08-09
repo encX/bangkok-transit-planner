@@ -5,7 +5,7 @@ import {getRandomIntInRange} from '../util/number.utils';
 import {StationService} from './station.service';
 
 @bind({scope: BindingScope.TRANSIENT})
-export class RoutesService {
+export class RouteService {
   constructor(@service() public stationService: StationService) {}
 
   async find(from: StationId, to: StationId): Promise<Route[]> {
