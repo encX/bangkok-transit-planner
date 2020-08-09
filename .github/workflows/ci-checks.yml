@@ -48,4 +48,4 @@ jobs:
     - name: Check Yarn installation (this will fail if some module has been installed by npm)
       run: yarn install --frozen-lockfile
     - name: Build (pretest), Test, Lint (posttest)
-    - run: yarn test
+      run: yarn test
