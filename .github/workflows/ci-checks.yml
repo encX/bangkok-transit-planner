@@ -47,6 +47,5 @@ jobs:
         restore-keys: api-yarn-
     - name: Check Yarn installation (this will fail if some module has been installed by npm)
       run: yarn install --frozen-lockfile
-    - run: yarn lint
-    - run: yarn build
+    - name: Build (pretest), Test, Lint (posttest)
     - run: yarn test
