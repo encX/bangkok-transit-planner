@@ -3,7 +3,6 @@ name: CI checks
 on:
   pull_request:
     branches: [ master ]
-    
 
 jobs:
   client-check:
@@ -23,7 +22,30 @@ jobs:
         path: node_modules
         key: client-yarn-${{ hashFiles('yarn.lock') }}
         restore-keys: client-yarn-
-    - run: yarn install --frozen-lockfile
+    - name: Check Yarn installation (this will fail if some module has been installed by npm)
+      run: yarn install --frozen-lockfile
     - run: yarn lint
     - run: yarn build
     - run: yarn test
+
+  api-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: Cache node_modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: api-yarn-${{ hashFiles('yarn.lock') }}
+        restore-keys: api-yarn-
+    - name: Check Yarn installation (this will fail if some module has been installed by npm)
+      run: yarn install --frozen-lockfile
+    - name: Build (pretest), Test, Lint (posttest)
+      run: yarn test
