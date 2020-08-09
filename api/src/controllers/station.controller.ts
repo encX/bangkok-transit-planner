@@ -7,13 +7,13 @@ import {
   Where,
 } from '@loopback/repository';
 import {
-  post,
-  param,
+  del,
   get,
   getModelSchemaRef,
+  param,
   patch,
+  post,
   put,
-  del,
   requestBody,
 } from '@loopback/rest';
 import {Station} from '../models';
@@ -22,7 +22,7 @@ import {StationRepository} from '../repositories';
 export class StationController {
   constructor(
     @repository(StationRepository)
-    public stationRepository : StationRepository,
+    public stationRepository: StationRepository,
   ) {}
 
   @post('/stations', {
@@ -57,9 +57,7 @@ export class StationController {
       },
     },
   })
-  async count(
-    @param.where(Station) where?: Where<Station>,
-  ): Promise<Count> {
+  async count(@param.where(Station) where?: Where<Station>): Promise<Count> {
     return this.stationRepository.count(where);
   }
 
@@ -120,7 +118,8 @@ export class StationController {
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(Station, {exclude: 'where'}) filter?: FilterExcludingWhere<Station>
+    @param.filter(Station, {exclude: 'where'})
+    filter?: FilterExcludingWhere<Station>,
   ): Promise<Station> {
     return this.stationRepository.findById(id, filter);
   }
