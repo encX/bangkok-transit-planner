@@ -25,7 +25,7 @@ module.exports = {
 		'quotes': ['error', 'single'],
 		'semi': ['error', 'always'],
 		'comma-dangle': ['error', 'always-multiline'],
-		'object-curly-spacing': ['error', 'always'],
+		'object-curly-spacing': ['error', 'never'],
 		'eol-last': ['error', 'always'],
 		'react/prop-types': 0,
 		'react/no-did-mount-set-state': 'error',
