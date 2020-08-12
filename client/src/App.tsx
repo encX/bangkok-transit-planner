@@ -1,68 +1,67 @@
 import React, { useState } from 'react';
-import { Row, Col, Input, Button, AutoComplete  } from 'antd';
+import { Row, Col, Button, AutoComplete } from 'antd';
 import 'antd/dist/antd.css';
 import './css/style.scss';
 
-
 const allStations = [
-	{value:"บางซื่อ"},
-	{value:"กำแพงเพชร"},
-	{value:"สวนจตุจักร"},
-	{value:"พหลโยธิน"},
-	{value:"ลาดพร้าว"}
+	{ value: 'บางซื่อ' },
+	{ value: 'กำแพงเพชร' },
+	{ value: 'สวนจตุจักร' },
+	{ value: 'พหลโยธิน' },
+	{ value: 'ลาดพร้าว' },
 ];
 
 function App(): JSX.Element {
-	
-	const [origin		, setOrigin] 	  = useState('');
-	const [destination	, setDestination] = useState('');
 
-	const [filteredOrigin		, setFilteredOrigin]      = useState<{ value: string }[]>(allStations);
-	const [filteredDestination	, setFilteredDestination] = useState<{ value: string }[]>(allStations);
+	const [origin, setOrigin] = useState('');
+	const [destination, setDestination] = useState('');
 
-	const onSearchOrigin = (searchText: string) => {
-		let filterdStations = filterStations(searchText);
+	const [filteredOrigin, setFilteredOrigin] = useState<{ value: string }[]>(allStations);
+	const [filteredDestination, setFilteredDestination] = useState<{ value: string }[]>(allStations);
+
+	const onSearchOrigin = (searchText: string): void => {
+		const filterdStations = filterStations(searchText);
 		setFilteredOrigin(filterdStations);
 	};
-	const onSearchDestination = (searchText: string) => {
-		let filterdStations = filterStations(searchText);
+	const onSearchDestination = (searchText: string): void => {
+		const filterdStations = filterStations(searchText);
 		setFilteredDestination(filterdStations);
 	};
 
-	const onSelectOrigin = (data: string) => {
-		let filterdStations = filterStations(data);
+	const onSelectOrigin = (data: string): void => {
+		const filterdStations = filterStations(data);
 		setFilteredOrigin(filterdStations);
 	};
-	const onSelectDestination = (data: string) => {
-		let filterdStations = filterStations(data);
+	const onSelectDestination = (data: string): void => {
+		const filterdStations = filterStations(data);
 		setFilteredDestination(filterdStations);
 	};
 
 
-	const onChangeOrigin = (data: string) => {
-	  	setOrigin(data);
+	const onChangeOrigin = (data: string): void => {
+		setOrigin(data);
 	};
 
-	const onChangeDestination = (data: string) => {
+	const onChangeDestination = (data: string): void => {
 		setDestination(data);
 	};
-	  
 
-	const filterStations = ( searchText: string ) => {
 
-		let filterdStations = allStations
+	const filterStations = (searchText: string): { value: string }[] => {
 
-		if( searchText !== "" ){
+		let filterdStations = allStations;
 
-			filterdStations = allStations.filter( ( value ) => {
-				return value.value.includes(searchText) === true
-			});	
+		if (searchText !== '') {
+
+			filterdStations = allStations.filter((value) => {
+				return value.value.includes(searchText) === true;
+			});
 
 		}
-		
+
 		return filterdStations;
 
-	}
+	};
 
 	return (
 		<div className="App base-component">
@@ -71,7 +70,7 @@ function App(): JSX.Element {
 					<AutoComplete
 						value={origin}
 						options={filteredOrigin}
-						style={{ width: "100%" }}
+						style={{ width: '100%' }}
 						onSelect={onSelectOrigin}
 						onSearch={onSearchOrigin}
 						onChange={onChangeOrigin}
@@ -82,7 +81,7 @@ function App(): JSX.Element {
 					<AutoComplete
 						value={destination}
 						options={filteredDestination}
-						style={{ width: "100%" }}
+						style={{ width: '100%' }}
 						onSelect={onSelectDestination}
 						onSearch={onSearchDestination}
 						onChange={onChangeDestination}
