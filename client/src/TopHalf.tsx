@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Row, Col, Button, AutoComplete } from 'antd';
+import React, {useState} from 'react';
+import {Row, Col, Button, AutoComplete} from 'antd';
 import 'antd/dist/antd.css';
 import './css/style.scss';
 
@@ -8,7 +8,7 @@ type props = {
 }
 
 
-function TopHalf ( { allStations } : props ): JSX.Element {
+function TopHalf ( {allStations} : props ): JSX.Element {
 
 	const [origin, setOrigin] = useState('');
 	const [destination, setDestination] = useState('');
@@ -67,7 +67,7 @@ function TopHalf ( { allStations } : props ): JSX.Element {
 					<AutoComplete
 						value={origin}
 						options={filteredOrigin}
-						style={{ width: '100%' }}
+						style={{width: '100%'}}
 						onSelect={onSelectOrigin}
 						onSearch={onSearchOrigin}
 						onChange={onChangeOrigin}
@@ -78,7 +78,7 @@ function TopHalf ( { allStations } : props ): JSX.Element {
 					<AutoComplete
 						value={destination}
 						options={filteredDestination}
-						style={{ width: '100%' }}
+						style={{width: '100%'}}
 						onSelect={onSelectDestination}
 						onSearch={onSearchDestination}
 						onChange={onChangeDestination}

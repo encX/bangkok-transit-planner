@@ -4,11 +4,11 @@ import 'antd/dist/antd.css';
 import './css/style.scss';
 
 const allStations = [
-	{ value: 'บางซื่อ' },
-	{ value: 'กำแพงเพชร' },
-	{ value: 'สวนจตุจักร' },
-	{ value: 'พหลโยธิน' },
-	{ value: 'ลาดพร้าว' },
+	{value: 'บางซื่อ'},
+	{value: 'กำแพงเพชร'},
+	{value: 'สวนจตุจักร'},
+	{value: 'พหลโยธิน'},
+	{value: 'ลาดพร้าว'},
 ];
 
 function App(): JSX.Element {
