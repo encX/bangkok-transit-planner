@@ -1,65 +1,63 @@
+import {AutoComplete, Button, Col, Row} from 'antd';
 import React, {useState} from 'react';
-import {Row, Col, Button, AutoComplete} from 'antd';
+
+import {AutoCompleteValue} from './models/AutoCompleteValue';
+import {Station} from './models/Station';
+
 import 'antd/dist/antd.css';
 import './css/style.scss';
 
-type props = {
-	allStations: {value: string}[],
+interface TopHalfProps {
+	stations: Station[],
 }
 
+function toAutoCompleteValue({name}: Station): AutoCompleteValue {
+	return {value: name};
+}
 
-function TopHalf ( {allStations} : props ): JSX.Element {
-
+function TopHalf({stations}: TopHalfProps): JSX.Element {
+	
 	const [origin, setOrigin] = useState('');
 	const [destination, setDestination] = useState('');
-
-	const [filteredOrigin, setFilteredOrigin] = useState<{ value: string }[]>(allStations);
-	const [filteredDestination, setFilteredDestination] = useState<{ value: string }[]>(allStations);
-
+	
+	const mappedStations = stations.map(toAutoCompleteValue);
+	
+	const [filteredOrigin, setFilteredOrigin] = useState<AutoCompleteValue[]>(mappedStations);
+	const [filteredDestination, setFilteredDestination] = useState<AutoCompleteValue[]>(mappedStations);
+	
 	const onSearchOrigin = (searchText: string): void => {
-		const filterdStations = filterStations(searchText);
-		setFilteredOrigin(filterdStations);
+		const filteredStations = filterStations(searchText);
+		setFilteredOrigin(filteredStations);
 	};
 	const onSearchDestination = (searchText: string): void => {
-		const filterdStations = filterStations(searchText);
-		setFilteredDestination(filterdStations);
+		const filteredStations = filterStations(searchText);
+		setFilteredDestination(filteredStations);
 	};
-
+	
 	const onSelectOrigin = (data: string): void => {
-		const filterdStations = filterStations(data);
-		setFilteredOrigin(filterdStations);
+		const filteredStations = filterStations(data);
+		setFilteredOrigin(filteredStations);
 	};
 	const onSelectDestination = (data: string): void => {
-		const filterdStations = filterStations(data);
-		setFilteredDestination(filterdStations);
+		const filteredStations = filterStations(data);
+		setFilteredDestination(filteredStations);
 	};
-
-
+	
 	const onChangeOrigin = (data: string): void => {
 		setOrigin(data);
 	};
-
+	
 	const onChangeDestination = (data: string): void => {
 		setDestination(data);
 	};
-
-
-	const filterStations = (searchText: string): { value: string }[] => {
-
-		let filterdStations = allStations;
-
-		if (searchText !== '') {
-
-			filterdStations = allStations.filter((value) => {
-				return value.value.includes(searchText) === true;
-			});
-
-		}
-
-		return filterdStations;
-
+	
+	const filterStations = (searchText: string): AutoCompleteValue[] => {
+		if (searchText === '') return stations.map(toAutoCompleteValue);
+		return stations
+			.filter(({name}) => name.includes(searchText))
+			.map(toAutoCompleteValue);
 	};
-
+	
 	return (
 		<div className="top-half">
 			<Row gutter={[48, 28]}>
