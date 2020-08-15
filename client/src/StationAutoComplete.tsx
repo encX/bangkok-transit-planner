@@ -49,5 +49,4 @@ export const StationAutoComplete: React.FunctionComponent<StationAutoCompletePro
 			placeholder="To"
 		/>
 	);
-	
 };
