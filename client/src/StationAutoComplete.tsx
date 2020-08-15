@@ -6,13 +6,14 @@ import {OptionData, OptionGroupData} from 'rc-select/lib/interface';
 interface StationAutoCompleteProps {
 	onSelect: (id:number) => void;
 	stations: Station[];
+	placeholder: string;
 }
 
 function toAutoCompleteValue({name, id}: Station): OptionData {
 	return {value: name, key: id};
 }
 
-export const StationAutoComplete: React.FunctionComponent<StationAutoCompleteProps> = ({onSelect, stations}): JSX.Element => {
+export const StationAutoComplete: React.FunctionComponent<StationAutoCompleteProps> = ({onSelect, stations, placeholder}): JSX.Element => {
 	const [station, setStation] = useState('');
 	const [filteredStation, setFilteredStation] = useState<OptionData[]>(stations.map(toAutoCompleteValue));
 	
@@ -46,7 +47,7 @@ export const StationAutoComplete: React.FunctionComponent<StationAutoCompletePro
 			onSelect={onSelectStation}
 			onSearch={onSearchStation}
 			onChange={onChangeStation}
-			placeholder="To"
+			placeholder={placeholder}
 		/>
 	);
 };
