@@ -1,53 +1,26 @@
-import {AutoComplete} from 'antd';
-import React, {useState} from 'react';
+import {Select} from 'antd';
+import React from 'react';
 import {Station} from './models/Station';
-import {OptionData, OptionGroupData} from 'rc-select/lib/interface';
+import {OptionData} from 'rc-select/lib/interface';
 
 interface StationAutoCompleteProps {
-	onSelect: (id:number) => void;
+	onChange: (id:number) => void;
 	stations: Station[];
 	placeholder: string;
 }
 
-function toAutoCompleteValue({name, id}: Station): OptionData {
-	return {value: name, key: id};
+function toSelectOptions({name, id}: Station): OptionData {
+	return {label: name, value: id};
 }
 
-export const StationAutoComplete: React.FunctionComponent<StationAutoCompleteProps> = ({onSelect, stations, placeholder}): JSX.Element => {
-	const [station, setStation] = useState('');
-	const [filteredStation, setFilteredStation] = useState<OptionData[]>(stations.map(toAutoCompleteValue));
-	
-	const onSearchStation = (searchText: string): void => {
-		const filteredStations = filterStations(searchText);
-		setFilteredStation(filteredStations);
-	};
-	
-	const onSelectStation = (data: string, option: OptionData | OptionGroupData): void => {
-		const filteredStations = filterStations(data);
-		setFilteredStation(filteredStations);
-		onSelect(option.key as number);
-	};
-	
-	const onChangeStation = (data: string): void => {
-		setStation(data);
-	};
-	
-	const filterStations = (searchText: string): OptionData[] => {
-		if (searchText === '') return stations.map(toAutoCompleteValue);
-		return stations
-			.filter(({name}) => name.includes(searchText))
-			.map(toAutoCompleteValue);
-	};
-	
+export const StationAutoComplete: React.FunctionComponent<StationAutoCompleteProps> = ({onChange, stations, placeholder}): JSX.Element => {
 	return (
-		<AutoComplete
-			value={station}
-			options={filteredStation}
-			style={{width: '100%'}}
-			onSelect={onSelectStation}
-			onSearch={onSearchStation}
-			onChange={onChangeStation}
+		<Select
+			showSearch={true}
 			placeholder={placeholder}
+			options={stations.map(toSelectOptions)}
+			style={{width: '100%'}}
+			onChange={onChange}
 		/>
 	);
 };

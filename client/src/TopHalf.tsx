@@ -24,10 +24,10 @@ function TopHalf({stations}: TopHalfProps): JSX.Element {
 		<div className="top-half">
 			<Row gutter={[48, 28]}>
 				<Col xs={24} sm={24} md={12}>
-					<StationAutoComplete onSelect={setFrom} stations={stations} placeholder="From"/>
+					<StationAutoComplete onChange={setFrom} stations={stations} placeholder="From"/>
 				</Col>
 				<Col xs={24} sm={24} md={12}>
-					<StationAutoComplete onSelect={setTo} stations={stations} placeholder="To"/>
+					<StationAutoComplete onChange={setTo} stations={stations} placeholder="To"/>
 				</Col>
 			</Row>
 			<Row>
