@@ -13,7 +13,7 @@ function toSelectOptions({name, id}: Station): OptionData {
 	return {label: name, value: id};
 }
 
-export const StationAutoComplete: React.FunctionComponent<StationAutoCompleteProps> = ({onChange, stations, placeholder}): JSX.Element => {
+export const StationSelect: React.FunctionComponent<StationAutoCompleteProps> = ({onChange, stations, placeholder}): JSX.Element => {
 	return (
 		<Select
 			showSearch={true}
