@@ -15,5 +15,5 @@ export async function getAllStations(): Promise<Station[]> {
 }
 
 export async function getRoutes(from: number, to: number): Promise<void> {
-	// todo
+	console.log('from', from, 'to', to);
 }
