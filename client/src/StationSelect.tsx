@@ -10,7 +10,7 @@ interface StationAutoCompleteProps {
 }
 
 function toSelectOptions({name, id}: Station): OptionData {
-	return {label: name, value: id};
+	return {value: name, key: id};
 }
 
 export const StationSelect: React.FunctionComponent<StationAutoCompleteProps> = ({onChange, stations, placeholder}): JSX.Element => {
