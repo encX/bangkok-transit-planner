@@ -1,26 +1,20 @@
-import React from 'react';
-import {Row, Col, Input, Button} from 'antd';
+import React, {useState, useEffect} from 'react';
+import {getAllStations} from './api';
+import {Station} from './models/Station';
+import TopHalf from './TopHalf';
 
 import 'antd/dist/antd.css';
+import './css/style.scss';
 
 function App(): JSX.Element {
+	const [stations, setStations] = useState<Station[]>([]);
+	useEffect(() => {
+		getAllStations().then(setStations);
+	}, []);
 	return (
-		<div className="App">
-			<Row>
-				<Col span={12}>
-					<Input placeholder="From" />
-				</Col>
-				<Col span={12}>
-					<Input placeholder="To" />
-				</Col>
-			</Row>
-			<Row>
-				<Col span={24}>
-					<Button type="primary" block>
-						Go!
-					</Button>
-				</Col>
-			</Row>
+		// todo: loading blocker
+		<div className="App base-component">
+			{stations.length && <TopHalf stations={stations} />}
 		</div>
 	);
 }
