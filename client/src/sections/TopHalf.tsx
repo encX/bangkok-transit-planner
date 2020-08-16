@@ -1,9 +1,9 @@
 import {Button, Col, Row} from 'antd';
 import React, {useState} from 'react';
 
-import {getRoutes} from './api';
-import {StationSelect} from './components/StationSelect';
-import {Station} from './models/Station';
+import {getRoutes} from '../api';
+import {StationSelect} from '../components/StationSelect';
+import {Station} from '../api/models/Station';
 
 interface TopHalfProps {
 	stations: Station[],

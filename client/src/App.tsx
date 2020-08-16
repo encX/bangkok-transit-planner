@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {getAllStations} from './api';
-import {Station} from './models/Station';
-import TopHalf from './TopHalf';
+import {Station} from './api/models/Station';
+import TopHalf from './sections/TopHalf';
 
 import 'antd/dist/antd.css';
 import './css/style.scss';
