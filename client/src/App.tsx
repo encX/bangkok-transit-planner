@@ -4,7 +4,7 @@ import {getAllStations, getRoutes} from './api';
 import {Route} from './api/models/Route';
 import {Station} from './api/models/Station';
 import {RoutesPanel} from './sections/RoutesPanel';
-import TopHalf from './sections/TopHalf';
+import SearchPanel from './sections/SearchPanel';
 
 import 'antd/dist/antd.css';
 import './css/App.scss';
@@ -20,7 +20,7 @@ function App(): JSX.Element {
 	return (
 		// todo: loading blocker
 		<div className="App">
-			<TopHalf stations={stations} />
+			<SearchPanel stations={stations} />
 			<RoutesPanel routes={routes}/>
 		</div>
 	);

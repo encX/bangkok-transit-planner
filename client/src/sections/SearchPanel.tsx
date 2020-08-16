@@ -10,7 +10,7 @@ interface TopHalfProps {
 	stations: Station[],
 }
 
-function TopHalf({stations}: TopHalfProps): JSX.Element {
+function SearchPanel({stations}: TopHalfProps): JSX.Element {
 	const [from, setFrom] = useState<number>();
 	const [to, setTo] = useState<number>();
 	
@@ -33,4 +33,4 @@ function TopHalf({stations}: TopHalfProps): JSX.Element {
 	);
 }
 
-export default TopHalf;
+export default SearchPanel;
