@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {getRoutes} from '../api';
 import {StationSelect} from '../components/StationSelect';
 import {Station} from '../api/models/Station';
+import {ROW_GUTTER} from '../constants';
 
 interface TopHalfProps {
 	stations: Station[],
@@ -18,8 +19,8 @@ function TopHalf({stations}: TopHalfProps): JSX.Element {
 	};
 	
 	return (
-		<div className="top-half">
-			<Row gutter={[48, 28]}>
+		<>
+			<Row gutter={ROW_GUTTER}>
 				<Col xs={24} sm={24} md={12}>
 					<StationSelect onChange={setFrom} stations={stations} placeholder="From"/>
 				</Col>
@@ -27,12 +28,12 @@ function TopHalf({stations}: TopHalfProps): JSX.Element {
 					<StationSelect onChange={setTo} stations={stations} placeholder="To"/>
 				</Col>
 			</Row>
-			<Row>
+			<Row gutter={ROW_GUTTER}>
 				<Col span={24}>
 					<Button type="primary" disabled={!from || !to} onClick={onGo} block>Go!</Button>
 				</Col>
 			</Row>
-		</div>
+		</>
 	);
 }
 

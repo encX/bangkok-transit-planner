@@ -1,8 +1,9 @@
-import {Tabs} from 'antd';
+import {Col, Row, Tabs} from 'antd';
 import React, {FunctionComponent} from 'react';
 
 import {Route} from '../api/models/Route';
 import {RouteDisplay} from '../components/RouteDisplay';
+import {ROW_GUTTER} from '../constants';
 
 interface RoutesPanelProps {
 	routes: Route[];
@@ -15,8 +16,10 @@ export const RoutesPanel: FunctionComponent<RoutesPanelProps> = ({routes}): JSX.
 		</Tabs.TabPane>;
 	
 	return (
-		<Tabs>
-			{routes.map(routeToTab)}
-		</Tabs>
+		<Row gutter={ROW_GUTTER}>
+			<Col span={24}>
+				<Tabs>{routes.map(routeToTab)}</Tabs>
+			</Col>
+		</Row>
 	);
 };
