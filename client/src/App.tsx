@@ -7,7 +7,7 @@ import {RoutesPanel} from './sections/RoutesPanel';
 import TopHalf from './sections/TopHalf';
 
 import 'antd/dist/antd.css';
-import './css/style.scss';
+import './css/App.scss';
 
 function App(): JSX.Element {
 	const [stations, setStations] = useState<Station[]>([]);
@@ -19,7 +19,7 @@ function App(): JSX.Element {
 	}, []);
 	return (
 		// todo: loading blocker
-		<div className="App base-component">
+		<div className="App">
 			<TopHalf stations={stations} />
 			<RoutesPanel routes={routes}/>
 		</div>
