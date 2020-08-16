@@ -20,7 +20,7 @@ function App(): JSX.Element {
 	return (
 		// todo: loading blocker
 		<div className="App base-component">
-			{stations.length && <TopHalf stations={stations} />}
+			<TopHalf stations={stations} />
 			<RoutesPanel routes={routes}/>
 		</div>
 	);
