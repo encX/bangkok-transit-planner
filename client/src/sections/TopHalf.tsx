@@ -19,21 +19,17 @@ function TopHalf({stations}: TopHalfProps): JSX.Element {
 	};
 	
 	return (
-		<>
-			<Row gutter={ROW_GUTTER}>
-				<Col xs={24} sm={24} md={12}>
-					<StationSelect onChange={setFrom} stations={stations} placeholder="From"/>
-				</Col>
-				<Col xs={24} sm={24} md={12}>
-					<StationSelect onChange={setTo} stations={stations} placeholder="To"/>
-				</Col>
-			</Row>
-			<Row gutter={ROW_GUTTER}>
-				<Col span={24}>
-					<Button type="primary" disabled={!from || !to} onClick={onGo} block>Go!</Button>
-				</Col>
-			</Row>
-		</>
+		<Row gutter={ROW_GUTTER}>
+			<Col xs={24} sm={24} md={12}>
+				<StationSelect onChange={setFrom} stations={stations} placeholder="From"/>
+			</Col>
+			<Col xs={24} sm={24} md={12}>
+				<StationSelect onChange={setTo} stations={stations} placeholder="To"/>
+			</Col>
+			<Col span={24}>
+				<Button type="primary" disabled={!from || !to} onClick={onGo} block>Go!</Button>
+			</Col>
+		</Row>
 	);
 }
 
