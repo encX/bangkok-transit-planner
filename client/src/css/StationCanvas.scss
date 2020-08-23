@@ -1,0 +1,36 @@
+$default-color: #888;
+$line-width: 4px;
+$dot-size: $line-width * 5;
+$dot-radius: $dot-size / 2;
+$dot-padding-top: 14px;
+
+.station-canvas {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&--top {
+		width: $line-width;
+		height: $dot-padding-top + 10;
+		&-start { background: none !important }
+		&-middle, &-end { background-color: $default-color }
+	}
+
+	&--bottom {
+		width: $line-width;
+		flex-grow: 1;
+		&-start, &-middle { background-color: $default-color }
+		&-end { background: none !important }
+	}
+	&--dot {
+		width: $dot-size;
+		height: $dot-size;
+		background-color: #FFF;
+		border: $default-color $line-width solid;
+		border-radius: $dot-radius;
+		position: absolute;
+		top: $dot-padding-top;
+	}
+}
