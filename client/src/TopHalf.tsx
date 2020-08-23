@@ -24,15 +24,15 @@ function TopHalf({stations}: TopHalfProps): JSX.Element {
 		<div className="top-half">
 			<Row gutter={[48, 28]}>
 				<Col xs={24} sm={24} md={12}>
-					<StationSelect onChange={setFrom} stations={stations} placeholder="From"/>
+					<StationSelect id="origin-selector" onChange={setFrom} stations={stations} placeholder="From"/>
 				</Col>
 				<Col xs={24} sm={24} md={12}>
-					<StationSelect onChange={setTo} stations={stations} placeholder="To"/>
+					<StationSelect id="destination-selector" onChange={setTo} stations={stations} placeholder="To"/>
 				</Col>
 			</Row>
 			<Row>
 				<Col span={24}>
-					<Button type="primary" disabled={!from || !to} onClick={onGo} block>Go!</Button>
+					<Button id="get-routes-button" type="primary" disabled={!from || !to} onClick={onGo} block>Go!</Button>
 				</Col>
 			</Row>
 		</div>
