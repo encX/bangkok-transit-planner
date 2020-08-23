@@ -2,7 +2,7 @@ import {Col, Row, Tabs} from 'antd';
 import React, {FunctionComponent} from 'react';
 
 import {Route} from '../api/models/Route';
-import {RouteDisplay} from '../components/RouteDisplay';
+import RouteDisplay from '../components/RouteDisplay';
 import {ROW_GUTTER} from '../constants';
 
 interface RoutesPanelProps {

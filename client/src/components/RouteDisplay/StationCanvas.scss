@@ -1,6 +1,6 @@
-@import "Common";
+@import "src/css/Common";
 
-$default-color: #888;
+$default-color: rgba(0, 0, 0, 0.85);
 
 .station-canvas {
 	width: 100%;

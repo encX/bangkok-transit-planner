@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import '../css/StationCanvas.scss';
+import './StationCanvas.scss';
 
 interface StationCanvasProps {
 	mode: 'start' | 'middle' | 'end';

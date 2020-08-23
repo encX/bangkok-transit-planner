@@ -1,4 +1,7 @@
 $route-line-width: 4px;
 $station-dot-size: $route-line-width * 5;
 $station-dot-radius: $station-dot-size / 2;
-$station-dot-pad-top: 14px;
+$station-dot-pad-top: 16px;
+
+$black-normal: rgba(0, 0, 0, 0.65);
+$black-important: rgba(0, 0, 0, 0.85);
