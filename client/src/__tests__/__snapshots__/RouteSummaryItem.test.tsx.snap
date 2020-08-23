@@ -14,6 +14,11 @@ exports[`RouteSummaryItem only required props: renders correctly 1`] = `
   >
     <div
       className="row-summary-item--name"
+      style={
+        Object {
+          "borderColor": undefined,
+        }
+      }
     >
       name
     </div>
@@ -44,6 +49,11 @@ exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
   >
     <div
       className="row-summary-item--name"
+      style={
+        Object {
+          "borderColor": "#ABCABC",
+        }
+      }
     >
       name
     </div>
@@ -62,6 +72,11 @@ exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
   >
     <div
       className="row-summary-item--flag"
+      style={
+        Object {
+          "backgroundColor": "#ABCABC",
+        }
+      }
     >
       flag
     </div>
