@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteSummaryItem only required props: renders correctly 1`] = `
+<Row
+  gutter={
+    Array [
+      16,
+      8,
+    ]
+  }
+>
+  <Col
+    flex="100px"
+  >
+    <div
+      className="row-summary-item--name"
+    >
+      name
+    </div>
+  </Col>
+  <Col
+    flex="1"
+  >
+    <div
+      className="row-summary-item--value"
+    >
+      value
+    </div>
+  </Col>
+</Row>
+`;
+
+exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
+<Row
+  gutter={
+    Array [
+      16,
+      8,
+    ]
+  }
+>
+  <Col
+    flex="100px"
+  >
+    <div
+      className="row-summary-item--name"
+    >
+      name
+    </div>
+  </Col>
+  <Col
+    flex="1"
+  >
+    <div
+      className="row-summary-item--value"
+    >
+      value
+    </div>
+  </Col>
+  <Col
+    flex="100px"
+  >
+    <div
+      className="row-summary-item--flag"
+    >
+      flag
+    </div>
+  </Col>
+</Row>
+`;
