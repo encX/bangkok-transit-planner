@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "update-snapshot": "react-scripts test -u",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.tsx' 'src/**/*.ts'",
     "lint-fix": "eslint --fix 'src/**/*.tsx' 'src/**/*.ts'"
