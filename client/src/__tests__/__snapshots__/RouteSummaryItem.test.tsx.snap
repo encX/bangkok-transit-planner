@@ -13,7 +13,7 @@ exports[`RouteSummaryItem only required props: renders correctly 1`] = `
     flex="100px"
   >
     <div
-      className="row-summary-item--name"
+      className="route-summary-item--name"
       style={
         Object {
           "borderColor": undefined,
@@ -27,7 +27,7 @@ exports[`RouteSummaryItem only required props: renders correctly 1`] = `
     flex="1"
   >
     <div
-      className="row-summary-item--value"
+      className="route-summary-item--value"
     >
       value
     </div>
@@ -48,7 +48,7 @@ exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
     flex="100px"
   >
     <div
-      className="row-summary-item--name"
+      className="route-summary-item--name"
       style={
         Object {
           "borderColor": "#ABCABC",
@@ -62,7 +62,7 @@ exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
     flex="1"
   >
     <div
-      className="row-summary-item--value"
+      className="route-summary-item--value"
     >
       value
     </div>
@@ -71,7 +71,7 @@ exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
     flex="100px"
   >
     <div
-      className="row-summary-item--flag"
+      className="route-summary-item--flag"
       style={
         Object {
           "backgroundColor": "#ABCABC",
