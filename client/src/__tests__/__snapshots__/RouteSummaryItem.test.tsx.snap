@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteSummaryItem only required props: renders correctly 1`] = `
+<Row
+  gutter={
+    Array [
+      16,
+      8,
+    ]
+  }
+>
+  <Col
+    flex="100px"
+  >
+    <div
+      className="route-summary-item--name"
+      style={
+        Object {
+          "borderColor": undefined,
+        }
+      }
+    >
+      name
+    </div>
+  </Col>
+  <Col
+    flex="1"
+  >
+    <div
+      className="route-summary-item--value"
+    >
+      value
+    </div>
+  </Col>
+</Row>
+`;
+
+exports[`RouteSummaryItem with optional props: renders correctly 1`] = `
+<Row
+  gutter={
+    Array [
+      16,
+      8,
+    ]
+  }
+>
+  <Col
+    flex="100px"
+  >
+    <div
+      className="route-summary-item--name"
+      style={
+        Object {
+          "borderColor": "#ABCABC",
+        }
+      }
+    >
+      name
+    </div>
+  </Col>
+  <Col
+    flex="1"
+  >
+    <div
+      className="route-summary-item--value"
+    >
+      value
+    </div>
+  </Col>
+  <Col
+    flex="100px"
+  >
+    <div
+      className="route-summary-item--flag"
+      style={
+        Object {
+          "backgroundColor": "#ABCABC",
+        }
+      }
+    >
+      flag
+    </div>
+  </Col>
+</Row>
+`;

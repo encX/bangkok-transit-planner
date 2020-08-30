@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StationCanvas case "end": renders correctly 1`] = `
+<div
+  className="station-canvas"
+>
+  <div
+    className="station-canvas--top station-canvas--top-end"
+    style={
+      Object {
+        "backgroundColor": "#123123",
+      }
+    }
+  />
+  <div
+    className="station-canvas--bottom station-canvas--bottom-end"
+    style={
+      Object {
+        "backgroundColor": "#123123",
+      }
+    }
+  />
+  <div
+    className="station-canvas--dot"
+    style={
+      Object {
+        "borderColor": "#123123",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`StationCanvas case "middle": renders correctly 1`] = `
+<div
+  className="station-canvas"
+>
+  <div
+    className="station-canvas--top station-canvas--top-middle"
+    style={
+      Object {
+        "backgroundColor": "#123123",
+      }
+    }
+  />
+  <div
+    className="station-canvas--bottom station-canvas--bottom-middle"
+    style={
+      Object {
+        "backgroundColor": "#123123",
+      }
+    }
+  />
+  <div
+    className="station-canvas--dot"
+    style={
+      Object {
+        "borderColor": "#123123",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`StationCanvas case "start": renders correctly 1`] = `
+<div
+  className="station-canvas"
+>
+  <div
+    className="station-canvas--top station-canvas--top-start"
+    style={
+      Object {
+        "backgroundColor": "#123123",
+      }
+    }
+  />
+  <div
+    className="station-canvas--bottom station-canvas--bottom-start"
+    style={
+      Object {
+        "backgroundColor": "#123123",
+      }
+    }
+  />
+  <div
+    className="station-canvas--dot"
+    style={
+      Object {
+        "borderColor": "#123123",
+      }
+    }
+  />
+</div>
+`;

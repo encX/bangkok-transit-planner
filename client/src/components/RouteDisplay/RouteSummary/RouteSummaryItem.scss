@@ -1,0 +1,21 @@
+@import "src/css/Common";
+
+.route-summary-item {
+	&--name {
+		border: 1px solid $black-normal;
+		padding: 0 4px;
+		text-align: center;
+	}
+
+	&--flag {
+		background-color: $black-normal;
+		color: #FFFFFF;
+		padding: 1px 4px;
+		text-align: center;
+	}
+
+	&--value {
+		padding: 1px;
+		font-weight: bold;
+	}
+}

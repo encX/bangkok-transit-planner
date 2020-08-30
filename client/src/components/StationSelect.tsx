@@ -1,7 +1,8 @@
 import {Select} from 'antd';
 import React from 'react';
-import {Station} from './models/Station';
 import {OptionData, OptionGroupData, OptionsType} from 'rc-select/lib/interface';
+
+import {Station} from '../api/models/Station';
 
 interface StationAutoCompleteProps {
 	onChange: (id:number) => void;
