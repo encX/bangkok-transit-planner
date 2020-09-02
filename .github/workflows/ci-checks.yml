@@ -27,6 +27,8 @@ jobs:
     - run: yarn lint
     - run: yarn build
     - run: yarn test
+    - run: yarn start
+    - run: yarn cypress:test
 
   api-check:
     runs-on: ubuntu-latest
