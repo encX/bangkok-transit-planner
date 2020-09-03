@@ -1,0 +1,8 @@
+@import "src/css/Common";
+
+.route-station {
+	&--time {
+		padding-top: $station-dot-pad-top;
+		text-align: right;
+	}
+}

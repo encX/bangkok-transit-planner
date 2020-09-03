@@ -1,0 +1,34 @@
+@import "src/css/Common";
+
+$default-color: rgba(0, 0, 0, 0.85);
+
+.station-canvas {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&--top {
+		width: $route-line-width;
+		height: $station-dot-pad-top + 10;
+		&-start { background: none !important }
+		&-middle, &-end { background-color: $default-color }
+	}
+
+	&--bottom {
+		width: $route-line-width;
+		flex-grow: 1;
+		&-start, &-middle { background-color: $default-color }
+		&-end { background: none !important }
+	}
+	&--dot {
+		width: $station-dot-size;
+		height: $station-dot-size;
+		background-color: #FFF;
+		border: $default-color $route-line-width solid;
+		border-radius: $station-dot-radius;
+		position: absolute;
+		top: $station-dot-pad-top;
+	}
+}
