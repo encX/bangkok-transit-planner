@@ -1,31 +1,33 @@
-describe('Top Half', () => {
+describe('SearchPanel', () => {
 
-    it('Go button disabled when one of selector is empty', () => {
+	it('Go button should be disabled when some of selector is empty', () => {
 
-      cy.visit('/')
+		cy.on('uncaught:exception', () => false);
 
-      cy.get("#origin-selector").as("originSelector")
-      cy.get("#destination-selector").as("destinationSelector")
-      cy.get("#get-routes-button").as("getRoutesButton")
+		cy.visit('/');
 
-
-      cy.get("@getRoutesButton").should("be.disabled")
-      
-
-      cy.get("@originSelector").parent().click() // Click for expanding selector options
-      cy.get("@originSelector").type("{enter}") // Press enter for select first option
-      
-
-      cy.get("@getRoutesButton").should("be.disabled")
+		cy.get('#origin-selector').as('originSelector');
+		cy.get('#destination-selector').as('destinationSelector');
+		cy.get('#get-routes-button').as('getRoutesButton');
 
 
-      cy.get("#destination-selector").parent().click() // Click for expanding selector options
-      cy.get("#destination-selector").type("{enter}") // Press enter for select first option
+		cy.get('@getRoutesButton').should('be.disabled');
 
 
-      cy.get("@getRoutesButton").should("be.enabled")
-      
+		cy.get('@originSelector').parent().click(); // Click for expanding selector options
+		cy.get('@originSelector').type('{enter}'); // Press enter for select first option
 
-    })
 
-})
+		cy.get('@getRoutesButton').should('be.disabled');
+
+
+		cy.get('#destination-selector').parent().click(); // Click for expanding selector options
+		cy.get('#destination-selector').type('{enter}'); // Press enter for select first option
+
+
+		cy.get('@getRoutesButton').should('be.enabled');
+
+
+	});
+
+});
