@@ -26,7 +26,12 @@ jobs:
       run: yarn install --frozen-lockfile
     - run: yarn lint
     - run: yarn build
-    - run: yarn test
+    - name: Client unit test
+      run: yarn test
+    - name: Start client in background
+      run: yarn start &
+    - name: Client UI test
+      run: yarn cypress:test
 
   api-check:
     runs-on: ubuntu-latest
